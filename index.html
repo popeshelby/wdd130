@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portal</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="photo/png" href="images/Pet-Paw--Streamline-Core-Gradient.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><h1>My Portal Page</h1></a>
+            <img class="logo" src="images/PopeS Wk5 Smaller Logo.png">
+            <img class="logo" src="images/PopeS Wk5 Smaller Logo.png">
+        </div>
+        <div class="nav-container">
+            <nav class="links" style="--items:4;">
+                <a href="index.html">
+                    Home
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✿</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✿</span>
+                    </span>
+                </a>
+                <a href="wwr/index.html" target="_blank" rel="noopener noreferrer">
+                    WWR
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">❀</span>
+                        <span class="sparkle sparkle-2">✽</span>
+                        <span class="sparkle sparkle-3">❀</span>
+                        <span class="sparkle sparkle-4">✽</span>
+                        <span class="sparkle sparkle-5">❀</span>
+                    </span>
+                </a>
+                <a href="ice.html">
+                    ICE
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✽</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✽</span>
+                    </span>
+                </a>
+                <a href="aboutme/index.html">
+                    About Me
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✽</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✽</span>
+                    </span>
+                </a>
+                <span class="line"></span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- br -->
+
+    <main>
+        <section id="section-one">
+            <div class="part-one">
+                <h2>Lorem ipsum dolor</h2>                    
+                <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+                </p>
+            </div>
+            <div class="part-two">
+                <div id="icon-row">
+                    <div class="icon-container" onclick="this.classList.toggle('clicked')">
+                        <div class="icon-flipper">
+                            <img class="front" src="images/bubble-daisy.png" alt="Daisy" style="width: 100%">
+                            <img class="back" src="images/bubble-face.png" alt="Cute Face" style="width: 100%">
+                        </div>
+                    </div>
+                    <div class="icon-container" onclick="this.classList.toggle('clicked')">
+                        <div class="icon-flipper">    
+                            <img class="front" src="images/bubble-lavender.png" alt="Lavender" style="width: 100%">
+                            <img class="back" src="images/bubble-butt-png.png" alt="Cute Butt" style="width: 100%">
+                        </div>
+                    </div>
+                    <div class="icon-container" onclick="this.classList.toggle('clicked')">
+                        <div class="icon-flipper">
+                            <img class="front" src="images/bubble-butterfly.png" alt="Butterfly" style="width: 100%">
+                            <img class="back" src="images/bubble-reach.png" alt="Reaching High" style="width: 100%">
+                        </div>
+                    </div>
+                </div>
+                <h3>Hover and Click!</h3>
+            </div>
+        </section>
+    <!-- br -->
+        <div id="section-two">
+    <!-- Image gallery section -->
+    <!-- Reference: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+            <section id="gallery">
+                <div class="gallery-container">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img class = "gallery" src="images/Milo1.jpg" alt="Milo as a Pancake" style="width: 100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img class = "gallery" src="images/Milo2.jpg" alt="Milo After His Haircut" style="width: 100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img class = "gallery" src="images/Milo3.jpg" alt="Milo and his Dino Toy" style="width: 100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img class = "gallery" src="images/Milo4.jpg" alt="Milo being Milo" style="width: 100%">    
+                    </div>
+    <!-- Next/Previous -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Img text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+    <!-- Thumbnail imgs -->
+                    <div class="gallery-row">
+                        <div class="gallery-column">
+                            <img class="demo-img" src="images/Milo1.jpg" style="width: 100%" onclick="currentSlide(1)" alt="Milo as a Pancake">
+                        </div>
+                        <div class="gallery-column">
+                            <img class="demo-img" src="images/Milo2.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Milo After His Haircut">
+                        </div>
+                        <div class="gallery-column">
+                            <img class="demo-img" src="images/Milo3.jpg" style="width: 100%" onclick="currentSlide(3)" alt="Milo and his Dino Toy">
+                        </div>
+                        <div class="gallery-column">
+                            <img class="demo-img" src="images/Milo4.jpg" style="width: 100%" onclick="currentSlide(4)" alt="Milo being Milo">
+                        </div>
+                    </div>
+                    <h4>Meet the Logo Inspiration, Milo!</h4>
+                </div>
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("demo-img");
+                        let captionText = document.getElementById("caption");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace("active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                </script>
+            </section>
+    <!-- List Section -->
+            <section id="bullet-side">
+                <div class="item-list">
+                    <h2>About Milo</h2>
+                    <ul>
+                        <li>He's a miniature schnauzer</li>
+                        <li>He loves apples as treats</li>
+                        <li>He's the bestest boy ever!</li>
+                    </ul>
+                    <h5>
+                        Milo's all bark for excitement and very playful. 
+                    </h5>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Table with Portal Page Details -->
+
+    <div class="table-content-box">
+        <table>
+            <tbody>
+                <tr class="color-one">
+                    <td class="page-name">Home</td>
+                    <td>About Home Page</td>
+                </tr>
+                <tr class="color-two">
+                    <td class="page-name">WWR</td>
+                    <td>About WWR Page</td>
+                </tr>
+                <tr class="color-one">
+                    <td class="page-name">ICE</td>
+                    <td>About ICE Page</td>
+                </tr>
+                <tr class="color-two">
+                    <td class="page-name">About Me</td>
+                    <td>Details About Me Page</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- br -->
+
+    <footer>
+    <!-- Last Updated -->
+        <h6>
+            Last Updated: November 10th, 2026
+        </h6>
+    <!-- Clickable Icons -->
+        <ul class="footer-icons">
+            <!-- email -->
+             <li style="--i: #db8fad; --j: #e6d079;">
+                <button id="open-email-button">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span class="title">Email Me!</span>
+                </button>
+             </li>
+             <!-- LinkedIn  -->
+            <li style="--i: #c6eea6; --j: #9cd3ec;">
+                <a href="https://www.linkedin.com/in/11shelbypope/" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <span class="title">LinkedIn</span>
+                </a>
+            </li>
+            <!-- Puppy -->
+             <li style="--i: #ccaaec; --j:#f7a0d3;">
+                <button id="open-puppy-button">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <span class="title">A Little Love</span>
+                </button>
+                <div id="puppy-popup" class="puppy-popup">
+                    <span id="close-puppy-button" class="close-button">&times;</span>
+                    <div class="puppy-popup-content">
+                        <img src="images/puppy-love.png" alt="Puppy Love">
+                        <p>A little love for you! ♡</p>
+                    </div>
+                </div>
+             </li>  
+        </ul>
+        <div id="email-form" class="email-form-overlay">
+            <div class="email-form-content">
+                <span id="close-form-button" class="close-button">&times;</span>
+                <h2>Contact Me!</h2>
+                <form action="/submit" method="POST">
+                    <div>
+                        <label for="user-name">Full Name:</label>
+                        <input type="text" id="user-name" name="username" required>
+                    </div>
+                    <div>
+                        <label for="user-email">Email Address:</label>
+                        <input type="email" id="user-email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="text-bubble">Message:</label>
+                        <textarea id="text-bubble" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+<script type="module"
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+</script>
+<script nomodule
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+</script>
+<script>
+// email popup
+const emailButton = document.getElementById("open-email-button");
+const emailForm = document.getElementById("email-form");
+const closeEmail = document.getElementById("close-form-button");
+// open email form
+emailButton.addEventListener("click", () => {
+    emailForm.style.display = "flex";
+    requestAnimationFrame(() => {
+        emailForm.classList.add("active");
+    });
+});
+
+// close email form
+function closeEmailForm() {
+    emailForm.classList.remove("active");
+    setTimeout(() => {
+        emailForm.style.display = "none";
+    }, 350);
+}
+closeEmail.addEventListener("click", closeEmailForm);
+emailForm.addEventListener("click", (event) => {
+    if (event.target === emailForm) {
+        closeEmailForm();
+    }
+});
+// puppy popup
+const puppyButton = document.getElementById("open-puppy-button");
+const puppyPopup = document.getElementById("puppy-popup");
+const closePuppy = document.getElementById("close-puppy-button");
+// open puppy image
+puppyButton.addEventListener("click", () => {
+    puppyPopup.style.display = "block";
+    puppyPopup.classList.add("active");
+});
+// close puppy image
+function closePuppyPopup() {
+    puppyPopup.classList.remove("active");
+    puppyPopup.style.display = "none";
+}
+closePuppy.addEventListener("click", closePuppyPopup);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        if (emailForm.classList.contains("active")) {
+            closeEmailForm();
+        }
+        if (puppyPopup.style.display === "block") {
+            closePuppyPopup;
+        }
+    }
+});
+</script>
+</body>
+</html>

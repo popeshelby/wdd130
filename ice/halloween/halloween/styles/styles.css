@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Flavors&family=Metal+Mania&family=Mystery+Quest&family=Nosifer&family=Rubik+Wet+Paint&display=swap');
+/* font types:
+    "Creepster", "Rubik Wet Paint", "Flavors"
+    "Nosifer", "Metal Mania", "Mystery Quest" */
+body {
+    background-color: black;
+    color: white;
+}
+h1 {
+    /* font-family: "Mystery Quest", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-family: "flavors", cursive; */
+    /* font-family: "Creepster", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: "Nosifer", sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    }
+h1:hover {
+    color: rgba(255, 42, 0, 0.929);
+    text-shadow: 0 0 40px #f80505;
+    transform: scale(1.2);
+}
+h2 {
+    font-family: "Flavors", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-top: 60px;
+}
+ul {
+    font-family: "Metal Mania", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #00ff00;
+}
+/* ul:hover {
+    text-shadow: 10px 10px 50px #00ff00;
+} */
+p {
+    font-family: "Metal Mania", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    padding: 15px 50px;
+    background-color: gray;
+    box-sizing: border-box;
+    margin: 70px 70px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border-style: dotted;
+    box-shadow: 5px 5px 100px rgba(255, 42, 0, 0.929);
+}
+main {
+    text-align: center;
+}
+.gradient {
+    position: relative;
+    isolation: isolate;
+    display: inline-block;
+    max-width: 90vw;
+}
+/* with div.gradient */
+/* img {
+    text-align: center;
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    border-radius: 15%;
+    position: relative;
+    z-index: 1;
+} */
+img {
+    anchor-name: --my-image;
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 15%;
+    mask-image: radial-gradient(circle, black 65%, transparent 100%);
+    }
+/* animated gradient background reference - https://www.youtube.com/watch?v=ezP4kbOvs_E */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+/* with div.gradient */
+/* div.gradient::after, div.gradient::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background-image: conic-gradient(from var(--angle), red, blue, purple, pink, yellow, orange, green, red);
+    z-index: 0;
+    border-radius: 15%;
+    animation: 3s spin linear infinite;
+}
+div.gradient::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+} */
+main::before, main::after {
+    content: '';
+    position: absolute;
+    position-anchor: --my-image;
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    margin: -8px;
+    background-image: conic-gradient(from var(--angle), red, blue, purple, pink, yellow, orange, green, red);
+    z-index: -1;
+    border-radius: 15%;
+    animation: 3s spin linear infinite;
+}
+main::before {
+    filter: blur(1.5rem);
+    opacity: 0.8;
+}
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+footer {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+}

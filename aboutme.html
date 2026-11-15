@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portal</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="photo/png" href="images/Dog-Streamline-Core-Gradient.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><h1>My Portal Page</h1></a>
+            <img class="logo" src="images/PopeS Wk5 Smaller Logo.png">
+            <img class="logo" src="images/PopeS Wk5 Smaller Logo.png">
+        </div>
+        <div class="nav-container">
+            <nav class="links" style="--items:4;">
+                <a href="index.html">
+                    Home
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✿</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✿</span>
+                    </span>
+                </a>
+                <a href="wwr/index.html" target="_blank" rel="noopener noreferrer">
+                    WWR
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">❀</span>
+                        <span class="sparkle sparkle-2">✽</span>
+                        <span class="sparkle sparkle-3">❀</span>
+                        <span class="sparkle sparkle-4">✽</span>
+                        <span class="sparkle sparkle-5">❀</span>
+                    </span>
+                </a>
+                <a href="ice.html">
+                    ICE
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✽</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✽</span>
+                    </span>
+                </a>
+                <a href="aboutme.html">
+                    About Me
+                    <span class="sparkle-layer">
+                        <span class="sparkle sparkle-1">✽</span>
+                        <span class="sparkle sparkle-2">❀</span>
+                        <span class="sparkle sparkle-3">✽</span>
+                        <span class="sparkle sparkle-4">❀</span>
+                        <span class="sparkle sparkle-5">✽</span>
+                    </span>
+                </a>
+                <span class="line"></span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- br -->
+
+    <main>
+        <section id="about-me">
+            <div id="scalloped-frame">
+                
+                <svg class="scalloped-background"
+                    viewBox="0 0 200 200"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+                        <linearGradient id="pastel-gradient"
+                                        x1="0%" y1="0%"
+                                        x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f7aef8"/>
+                            <stop offset="35%" stop-color="#c77dff"/>
+                            <stop offset="70%" stop-color="#a1a97a"/>
+                            <stop offset="100%" stop-color="#f2e0a5"/>
+                        </linearGradient>
+                    </defs>
+
+                    <g fill="url(#pastel-gradient)">
+
+                        <!-- Center circle -->
+                        <circle cx="100" cy="100" r="70"/>
+
+                        <!-- Twelve rounded scallops -->
+                        <circle cx="100" cy="30" r="20"/>
+                        <circle cx="135" cy="39" r="20"/>
+                        <circle cx="161" cy="65" r="20"/>
+                        <circle cx="170" cy="100" r="20"/>
+                        <circle cx="161" cy="135" r="20"/>
+                        <circle cx="135" cy="161" r="20"/>
+                        <circle cx="100" cy="170" r="20"/>
+                        <circle cx="65" cy="161" r="20"/>
+                        <circle cx="39" cy="135" r="20"/>
+                        <circle cx="30" cy="100" r="20"/>
+                        <circle cx="39" cy="65" r="20"/>
+                        <circle cx="65" cy="39" r="20"/>
+
+                    </g>
+                </svg>
+
+                <img src="images/Milo-and-Me.jpg" alt="Milo and Me">
+            </div>
+        </section>
+        <div id="family">
+            <img src="images/Londons-first.JPG" alt="London's First Birthday">
+        </div>
+        <div id="internship">
+            <img src="images/Internship-complete.jpg" alt="Internship Completion">
+        </div>
+        <div id="mission">
+            <img src="images/Missionary.jpg" alt="Missionary Part One">
+            <img src="images/Mission-End.jpg" alt="Missionary Part Two">
+        </div>
+        <div id="heritage">
+            <img src="images/Japan.jpg" alt="Me in Japan">
+        </div>
+    </main>
+
+    <!-- br -->
+
+    <footer>
+    <!-- Last Updated -->
+        <h6>
+            Last Updated: November 10th, 2026
+        </h6>
+    <!-- Clickable Icons -->
+        <ul class="footer-icons">
+            <!-- email -->
+             <li style="--i: #db8fad; --j: #e6d079;">
+                <button id="open-email-button">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span class="title">Email Me!</span>
+                </button>
+             </li>
+             <!-- LinkedIn  -->
+            <li style="--i: #c6eea6; --j: #9cd3ec;">
+                <a href="https://www.linkedin.com/in/11shelbypope/" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <span class="title">LinkedIn</span>
+                </a>
+            </li>
+            <!-- Puppy -->
+             <li style="--i: #ccaaec; --j:#f7a0d3;">
+                <button id="open-puppy-button">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <span class="title">A Little Love</span>
+                </button>
+                <div id="puppy-popup" class="puppy-popup">
+                    <span id="close-puppy-button" class="close-button">&times;</span>
+                    <div class="puppy-popup-content">
+                        <img src="images/puppy-love.png" alt="Puppy Love">
+                        <p>A little love for you! ♡</p>
+                    </div>
+                </div>
+             </li>  
+        </ul>
+        <div id="email-form" class="email-form-overlay">
+            <div class="email-form-content">
+                <span id="close-form-button" class="close-button">&times;</span>
+                <h2>Contact Me!</h2>
+                <form action="/submit" method="POST">
+                    <div>
+                        <label for="user-name">Full Name:</label>
+                        <input type="text" id="user-name" name="username" required>
+                    </div>
+                    <div>
+                        <label for="user-email">Email Address:</label>
+                        <input type="email" id="user-email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="text-bubble">Message:</label>
+                        <textarea id="text-bubble" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+<script type="module"
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+</script>
+<script nomodule
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+</script>
+<script>
+// email popup
+const emailButton = document.getElementById("open-email-button");
+const emailForm = document.getElementById("email-form");
+const closeEmail = document.getElementById("close-form-button");
+// open email form
+emailButton.addEventListener("click", () => {
+    emailForm.style.display = "flex";
+    requestAnimationFrame(() => {
+        emailForm.classList.add("active");
+    });
+});
+
+// close email form
+function closeEmailForm() {
+    emailForm.classList.remove("active");
+    setTimeout(() => {
+        emailForm.style.display = "none";
+    }, 350);
+}
+closeEmail.addEventListener("click", closeEmailForm);
+emailForm.addEventListener("click", (event) => {
+    if (event.target === emailForm) {
+        closeEmailForm();
+    }
+});
+// puppy popup
+const puppyButton = document.getElementById("open-puppy-button");
+const puppyPopup = document.getElementById("puppy-popup");
+const closePuppy = document.getElementById("close-puppy-button");
+// open puppy image
+puppyButton.addEventListener("click", () => {
+    puppyPopup.style.display = "block";
+    puppyPopup.classList.add("active");
+});
+// close puppy image
+function closePuppyPopup() {
+    puppyPopup.classList.remove("active");
+    puppyPopup.style.display = "none";
+}
+closePuppy.addEventListener("click", closePuppyPopup);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        if (emailForm.classList.contains("active")) {
+            closeEmailForm();
+        }
+        if (puppyPopup.style.display === "block") {
+            closePuppyPopup;
+        }
+    }
+});
+</script>
+</body>
+</html>

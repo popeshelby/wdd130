@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d3d3d3, #001f3f);
+  background-repeat: no-repeat; /* Just in case */
+  background-attachment: fixed;
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+.header-image {
+  background-image: url('../images/icenter.png'); /* Replace with your image */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+}
+
+.header-image h1 {
+  margin: 0;
+  line-height: 0.9;
+    font-size: 3.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: #00000055;
+}
+
+.content-box {
+  background-color: white;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+  padding: 40px;
+  box-shadow: 5px 5px 0px black;
+  min-height: 400px;
+}
+
+table {
+  width: 100%;
+  height: 200px;
+  /* border-collapse: collapse; */
+  table-layout: fixed;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+thead {
+  font-size: 25px;
+  height: 50px;
+}
+tbody {
+  font-size: 15px;
+}
+tr.table-head {
+  background-color: rgb(166, 180, 205);
+}
+tr {
+  background-color: rgb(196, 220, 255);
+}
+#form-button {
+  padding-bottom: 25px;
+}
+.waiting-img {
+  opacity: 0.2;
+  width: 300px;
+  height: auto;
+  z-index: -2;
+}
+button {
+  background-color: rgb(251, 252, 253);
+  width: 25%;
+  height: auto;
+  padding: 12px;
+  color: #2280df;
+  font-size: 15px;
+  border-radius: 8px;
+}
+button:hover {
+  background-color: rgb(181, 181, 182);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}

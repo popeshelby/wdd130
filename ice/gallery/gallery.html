@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images of Christ</title>
+    <link rel="icon" type="image/png" href="images/Hearts-Symbol--Streamline-Core-Gradient.png">
+    <style>
+        body {
+            background: black;
+            cursor: none;
+        }
+        #wrapper{
+            width: 640px;
+            margin: 0 auto;
+        }
+        nav {
+            color: white;
+            text-align: center;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 5px;
+            text-shadow:
+                0 0 15px gold,
+                0 0 25px white;
+            -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.307); 
+            
+        }
+        #gallery{
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 200px 200px 200px;
+            border: 15px solid rgb(255, 255, 255);
+            width: 100%;
+            background-color: #ddd;
+            background-image:
+                linear-gradient(45deg, #ccc 26%, transparent 26%), 
+                linear-gradient(135deg, #ccc 26%, transparent 26%),
+                linear-gradient(45deg, transparent 75%, #ccc 75%),
+                linear-gradient(135deg, transparent 75%, #ccc 75%);
+            background-size: 20px 20px; /* Must be a square */
+            background-position: 0 0, 10px 0, 10px -10px, 0 10px; 
+            gap: 20px;
+            
+        }
+        #gallery a {
+            cursor: url('images/christus.png'), pointer;
+        }
+        /* reference: https://prismic.io/blog/css-hover-effects */
+        #gallery img {
+            /* make a thumbnail of the image that is 200x300 
+               instead of using width and height here to help the page load faster */
+            width: 200px; 
+            height: 300px;
+
+            opacity: 0.5;
+            display:block;
+            object-fit: cover;
+        /* reference design OG */
+            --b: 8px;
+            --g: 5px; 
+            --c: #f5d27a;
+            outline: 15px solid #0009;
+            outline-offset: -15px;
+            transition:
+                outline 0.3s ease,
+                outline-offset 0.3s ease,
+                opacity 0.3s ease;
+        /* reference design 2 */
+            /* --b: 8px;
+            --g: 5px; 
+            --c: #f5d27a;
+            outline: 0px solid transparent;
+            outline-offset: 0px;
+            transition: 
+                transform 0.3s ease,
+                outline 0.3s ease,
+                outline-offset 0.3s ease,
+                opacity 0.3s ease; */
+        /* glowing design */
+            /* border: 2px solid transparent;
+            border-radius: 5px;
+            transition:
+                opacity 0.4s ease,
+                border-color 0.4s ease,
+                box-shadow 0.4s ease; */
+        }
+        #gallery img:hover{
+            opacity: 1;
+        /* reference design OG */
+            outline: var(--b) solid var(--c);
+            outline-offset: var(--g);
+        /* reference design 2*/
+            /* position: relative;
+            z-index: 10;
+            transform: scale(1);
+            outline: var(--b) solid var(--c)
+            outline-offset: var(--g); */
+        /* glowing design */
+            /* border-color: #f5d27a;
+            box-shadow:
+                0 0 4px #f5d27a,
+                0 0 10px rgba(245, 210, 122, 0.8),
+                0 0 18px rgba(212, 160, 23, 0.5); */
+        }
+        /* #gallery:has(img:hover) img:not(hover) {
+            transform: scale(0.90);
+            opacity: 35%;
+        } */
+        #cursor-glow {
+            position: fixed;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            background: rgba(245, 210, 122, 0.15);
+            box-shadow:
+                0 0 5px #f5d27a,
+                0 0 12px #e6b84f,
+                0 0 22px #d4a017,
+                0 0 35px rgba(184, 134, 11, 0.7);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <h1>Christ Art Gallery</h1>
+        </nav>
+        <main>
+            <div id="gallery">
+                <a href="images/big/img1.jpg"><img src="images/small/img1.jpg" alt="Christ praying with the Nephites" ></a>
+                <a href="images/big/img2.jpg"><img src="images/small/img2.jpg" alt="Jesus the Christ" ></a>
+                <a href="images/big/img3.jpg"><img src="images/small/img3.jpg" alt="Jesus Raising the Daughter of Jairus" ></a>
+                <a href="images/big/img4.jpg"><img src="images/small/img4.jpg" alt="The Lord Appears in the Kirtland Temple" ></a>
+                <a href="images/big/img5.jpg"><img src="images/small/img5.jpg" alt="Crucifixion of Jesus Christ" ></a>
+                <a href="images/big/img6.jpg"><img src="images/small/img6.jpg" alt="Jesus Calms the Storm" ></a>
+            </div>
+        </main>
+    </div>
+<div id="cursor-glow"></div>
+<script>
+const glow = document.querySelector("#cursor-glow");
+document.addEventListener("mousemove", (e) => {
+    glow.style.left = (e.clientX + 32) + "px";
+    glow.style.top = (e.clientY + 12) + "px";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags</title>
+    <link rel="icon" type="photo/png" href="images/Airport-Plane--Streamline-Core-Gradient.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            display: grid;
+            grid-template-columns: .1fr .1fr 1fr .1fr;
+            margin-top: 20px;
+        }
+        hr {
+            width: 100%;
+            grid-column: 1 / 5;
+        }
+        h2 {
+            grid-column: 2/3;
+            margin-right: 10px;
+        }
+/* Split Reference: https://prismic.io/blog/css-hover-effects */
+/* Split Image */
+        .container {
+            padding: 2rem;
+        }
+        .split-image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+/* Chile */
+        #blue {
+            background: blue;
+            grid-column: 1 / 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            top: 0;
+            left: 0;
+            background-position: top left;
+        }
+
+        #white {
+            background: white;
+            grid-column: 2 / 4;
+            top: 0;
+            right: 0;
+            background-position: top right;
+        }
+
+        #red {
+            background: red;
+            grid-column: 1 / 4;
+            bottom: 0;
+            background-position: bottom;
+        }
+
+        #chile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            margin-bottom: 12px;
+            /* position: absolute; */
+        }
+
+        .star {
+            width: 70px;
+            aspect-ratio: 1;
+            background: white;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+/* Chile Split */
+        .split-image-container:hover
+        #blue {
+            transform: translate(-10px, -10px);
+        }
+        .split-image-container:hover
+        #white {
+            transform: translate(10px, -10px);
+        }
+        .split-image-container:hover
+        #red {
+            transform: translate(1px, 5px);
+        }
+/* Denmark */
+        #denmark {
+            display: grid;
+            grid-template-columns: 1fr 25px 2fr;
+            grid-template-rows: 1fr 25px 1fr;
+            height: 200px;
+            width: 300px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        #dred1 {
+            background: red;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            top: 0;
+            left: 0;
+            background-position: top left;
+        }
+        #dred5 {
+            background: red;
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            top: 0;
+            right: 0;
+            background-position: top right;
+
+        }
+        #dred2 {
+            background: white;
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            /* z-index: 2; */
+            
+        }
+        #dred3 {
+            background: white;
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            /* z-index: 2; */
+        }
+        #dred4 {
+            background: red;
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            bottom: 0;
+            left: 0;
+            background-position: bottom left;
+        }
+        #dred6 {
+            background: red;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            bottom: 0;
+            right: 0;
+            background-position: bottom right;
+        }
+/* Denmark Split */
+        .split-image-container:hover
+        #dred1 {
+            transform: translate(-10px, -10px);
+        }
+        .split-image-container:hover
+        #dred5 {
+            transform: translate(10px, -10px);
+        }
+        .split-image-container:hover
+        #dred4 {
+            transform: translate(-10px, 10px);
+        }
+        .split-image-container:hover
+        #dred6 {
+            transform: translate(10px, 10px);
+        }
+/* Finland */
+        #finland {
+            display: grid;
+            grid-template-columns: 1fr 35px 2fr;
+            grid-template-rows: 1fr 35px 1fr;
+            height: 200px;
+            width: 300px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        #fwhite1 {
+            background: blue;
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            /* z-index: 2; */
+        }
+        #fwhite2 {
+            background: blue;
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            /* z-index: 2; */
+        }
+        #fwhite3 {
+            background: white;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            top: 0;
+            left: 0;
+            background-position: top left;
+        }
+        #fwhite5 {
+            background: white;
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            right: 0;
+            background-position: top right;
+        }
+        #fwhite4 {
+            background: white;
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            bottom: 0;
+            left: 0;
+            background-position: bottom left;
+        }
+        #fwhite6 {
+            background: white;
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            bottom: 0;
+            right: 0;
+            background-position: bottom right;
+        }
+/* Finland Split */
+        .split-image-container:hover
+        #fwhite3 {
+            transform: translate(-10px, -10px);
+        }
+        .split-image-container:hover
+        #fwhite5 {
+            transform: translate(10px, -10px);
+        }
+        .split-image-container:hover
+        #fwhite4 {
+            transform: translate(-10px, 10px);
+        }
+        .split-image-container:hover
+        #fwhite6 {
+            transform: translate(10px, 10px);
+        }
+/* Benin */
+        #benin {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        #bgreen {
+            background: green;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            right: 0;
+            background-position: right;
+        }
+        #byellow {
+            background: yellow;
+            /* grid-column: 2 / 3; */
+            /* grid-row: 1 / 2; */
+            top: 0;
+            right: 0;
+            background-position: top right;
+        }
+        #bred {
+            background: red;
+            /* grid-column: 2 / 3; */
+            /* grid-row: 2 / 3; */
+            bottom: 0;
+            right: 0;
+            background-position: bottom right;
+        }
+/* Benin Split */
+        .split-image-container:hover
+        #bgreen {
+            transform: translate(-10px);
+        }
+        .split-image-container:hover
+        #byellow {
+            transform: translate(10px, -10px);
+        }
+        .split-image-container:hover
+        #bred {
+            transform: translate(10px, 10px);
+        }
+/* Italy */
+        #italy {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        #igreen {
+            background: rgb(38, 129, 38);
+            /* grid-column: 1 / 2; */
+            top: 0;
+            left: 0;
+            background-position: top left;
+        }
+        #iwhite {
+            background: white;
+            /* grid-column: 2 / 3; */
+        }
+        #ired {
+            background: rgb(189, 11, 11);
+            /* grid-column: 3 / 4; */
+            bottom: 0;
+            right: 0;
+            background-position: bottom right;
+        }
+/* Italy Split */
+        .split-image-container:hover
+        #igreen {
+            transform: translate(-10px, -10px);
+        }
+        .split-image-container:hover
+        #ired {
+            transform: translate(10px, 10px);
+        }
+/* C.A.R. */
+        #c-a-r {
+            display: grid;
+            grid-template-columns: 1fr 50px 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        #car-blue {
+            background: rgb(0, 0, 132);
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            top: 0;
+            left: 0;
+            background-position: top left;
+        }
+        #car-star {
+            width: 40px;
+            margin: 5px;
+            margin-left: 30px;
+            aspect-ratio: 1;
+            background: rgb(255, 208, 0);
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+        #car-white {
+            background: white;
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            top: 0;
+            right: 0;
+            background-position: top right;
+        }
+        #car-green {
+            background: rgb(1, 135, 1);
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+            bottom: 0;
+            left: 0;
+            background-position: bottom left;
+        }
+        #car-mustard {
+            background: rgb(255, 208, 0);
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+            bottom: 0;
+            right: 0;
+            background-position: bottom right;
+        }
+        #car-red {
+            background: rgb(201, 38, 38);
+            grid-column: 2 / 3;
+            grid-row: 1 / 5;
+            z-index: 2;
+        }
+/* C.A.R. Split */
+        .split-image-container:hover
+        #car-blue {
+            transform: translate(-10px, -10px);
+        }
+        .split-image-container:hover
+        #car-white {
+            transform: translate(10px, -4px);
+        }
+        .split-image-container:hover
+        #car-green {
+            transform: translate(-10px, 4px);
+        }
+        .split-image-container:hover
+        #car-mustard {
+            transform: translate(10px, 10px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using CSS Grid to make Country Flags</h1>
+    </header>
+    <main>
+        <h2>Chile</h2>
+        <div class="continer">
+            <div id="chile" class="split-image-container">
+                <div id="blue">
+                    <div class="star"></div>
+                </div>
+                <div id="white"></div>
+                <div id="red"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Denmark</h2>
+        <div class="continer">
+            <div id="denmark" class="split-image-container">
+                <div id="dred1"></div>
+                <div id="dred2"></div>
+                <div id="dred3"></div>
+                <div id="dred4"></div>
+                <div id="dred5"></div>
+                <div id="dred6"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Finland</h2>
+        <div class="continer">
+            <div id="finland" class="split-image-container">
+                <div id="fwhite1"></div>
+                <div id="fwhite2"></div>
+                <div id="fwhite3"></div>
+                <div id="fwhite4"></div>
+                <div id="fwhite5"></div>
+                <div id="fwhite6"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Benin</h2>
+        <div class="continer">
+            <div id="benin" class="split-image-container">
+                <div id="bgreen"></div>
+                <div id="byellow"></div>
+                <div id="bred"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Italy</h2>
+        <div class="continer">
+            <div id="italy" class="split-image-container">
+                <div id="igreen"></div>
+                <div id="iwhite"></div>
+                <div id="ired"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>C.A.R.</h2>
+        <div class="continer">
+            <div id="c-a-r" class="split-image-container">
+                <div id="car-blue">
+                    <div id="car-star"></div>
+                </div>
+                <div id="car-white"></div>
+                <div id="car-green"></div>
+                <div id="car-mustard"></div>
+                <div id="car-red"></div>
+            </div>
+        </div>
+        <hr>
+
+    </main>
+
+</body>
+
+</html>
