@@ -71,6 +71,15 @@ header::before {
 }
 .logo-container a {
     text-decoration: none;
+    color: #a790b9;
+}
+.logo-container a:visited {
+    text-decoration: none;
+    color: #a790b9;
+}
+.logo-container a:hover {
+    text-decoration: none;
+    color: #A1A97A;
 }
 .logo-container .logo:nth-child(2) {
     clip-path: polygon(0 0, 100% 0, 100% 55%, 0 55%);
@@ -87,6 +96,10 @@ header::before {
 .logo-container:hover .logo:nth-child(3) {
     transform: translateY(30px);
     transition-duration: 0.8s;
+}
+.logo-container a:active {
+    text-decoration: none;
+    color: #A1A97A;
 }
 
 /* nav bar */
