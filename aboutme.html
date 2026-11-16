@@ -65,6 +65,17 @@
 
     <main>
         <section id="about-me">
+            <div id="about-me-info">
+                <h2>About Me</h2> 
+                <p>
+                    Hello, my name is Shelby, and this cute fur baby of mine is Milo.
+                    I'm a foodie enthusiast and love trying new foods. For that very reason,
+                    I was inspired to start running to balance the food intake, only to
+                    discover a genuine new passion. I'm a strong believer in furthering knowledge
+                    and seeking experience to grow and refine oneself, which is what has lead me
+                    to where I am today.
+                </p>
+            </div>
             <div id="scalloped-frame">
                 
                 <svg class="scalloped-background"
@@ -72,54 +83,113 @@
                     xmlns="http://www.w3.org/2000/svg">
 
                     <defs>
-                        <linearGradient id="pastel-gradient"
+                        <circle id="petal" cx="100" cy="30" r="24"/>
+                        <linearGradient id="scallop-gradient"
                                         x1="0%" y1="0%"
-                                        x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#f7aef8"/>
-                            <stop offset="35%" stop-color="#c77dff"/>
-                            <stop offset="70%" stop-color="#a1a97a"/>
-                            <stop offset="100%" stop-color="#f2e0a5"/>
+                                        x2="100%" y2="175%">
+                            <!-- Light Blue -->
+                            <stop offset="0%" stop-color="#BDE7F7"/>
+
+                            <!-- Light Yellow -->
+                            <stop offset="25%" stop-color="#FFF0B8"/>
+
+                            <!-- Light Pink -->
+                            <stop offset="50%" stop-color="#F9C5DF"/>
+
+                            <!-- Light Violet -->
+                            <stop offset="75%" stop-color="#DCC8F7"/>
+
+                            <!-- Light Green -->
+                            <stop offset="100%" stop-color="#D6EFCB"/>
+
+
                         </linearGradient>
                     </defs>
 
-                    <g fill="url(#pastel-gradient)">
+                    <g fill="url(#scallop-gradient)">
+                        <circle cx="100" cy="100" r="72"/>
 
-                        <!-- Center circle -->
-                        <circle cx="100" cy="100" r="70"/>
-
-                        <!-- Twelve rounded scallops -->
-                        <circle cx="100" cy="30" r="20"/>
-                        <circle cx="135" cy="39" r="20"/>
-                        <circle cx="161" cy="65" r="20"/>
-                        <circle cx="170" cy="100" r="20"/>
-                        <circle cx="161" cy="135" r="20"/>
-                        <circle cx="135" cy="161" r="20"/>
-                        <circle cx="100" cy="170" r="20"/>
-                        <circle cx="65" cy="161" r="20"/>
-                        <circle cx="39" cy="135" r="20"/>
-                        <circle cx="30" cy="100" r="20"/>
-                        <circle cx="39" cy="65" r="20"/>
-                        <circle cx="65" cy="39" r="20"/>
-
+                        <use href="#petal"/>
+                        <use href="#petal" transform="rotate(30 100 100)"/>
+                        <use href="#petal" transform="rotate(60 100 100)"/>
+                        <use href="#petal" transform="rotate(90 100 100)"/>
+                        <use href="#petal" transform="rotate(120 100 100)"/>
+                        <use href="#petal" transform="rotate(150 100 100)"/>
+                        <use href="#petal" transform="rotate(180 100 100)"/>
+                        <use href="#petal" transform="rotate(210 100 100)"/>
+                        <use href="#petal" transform="rotate(240 100 100)"/>
+                        <use href="#petal" transform="rotate(270 100 100)"/>
+                        <use href="#petal" transform="rotate(300 100 100)"/>
+                        <use href="#petal" transform="rotate(330 100 100)"/>
                     </g>
                 </svg>
-
                 <img src="images/Milo-and-Me.jpg" alt="Milo and Me">
             </div>
         </section>
-        <div id="family">
-            <img src="images/Londons-first.JPG" alt="London's First Birthday">
-        </div>
-        <div id="internship">
-            <img src="images/Internship-complete.jpg" alt="Internship Completion">
-        </div>
-        <div id="mission">
-            <img src="images/Missionary.jpg" alt="Missionary Part One">
-            <img src="images/Mission-End.jpg" alt="Missionary Part Two">
-        </div>
-        <div id="heritage">
-            <img src="images/Japan.jpg" alt="Me in Japan">
-        </div>
+
+        <section id="family">
+                <img src="images/Londons-first.JPG
+                " alt="London's First Birthday">
+            <div id="family-info">
+                <h2>Family Background</h2>
+                <p>
+                    I was born and raised in Utah, and come from a growing family of four.
+                    My older sister, whom is married, has a baby girl (featured in the photo) 
+                    and fur baby poodle named Lucy. My dad grew up in Provo, Utah, and my mom
+                    grew up in Japan, so I share a strong connection with Japanese culture and
+                    have been heavily influenced by it to become the person I am today.    
+                </p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Life-changing Experiences</h2>
+            <div id="internship">
+                <h3>The Ritz-Carlton, Kyoto</h3>
+                <img src="images/Internship-complete.jpg" alt="Internship Completion">
+                <p>
+                    In 2023, I had the grand opportunity to serve a 6-month internship in
+                    Kyoto, Japan at Marriot's Ritz-Carlton as a member part of the Guest Services
+                    team. I met some incredibly wonderful and devoted people. At the time, I had
+                    my sights set on a career in hospitality & tourism. This internship was truly 
+                    an experience that tested my capacity, and made me realize how much endurance 
+                    and capability I have to grow and learn.
+                    <br><br>
+                    While I was aware Japan had a significantly different work culture, my own 
+                    personal experience gave me new perspective about life in Japan. I also realized
+                    perhaps this career path wasn't quite the one I wanted for myself. It was around 
+                    this time that I began to test the waters in the tech world and began to learn 
+                    coding through free online resources and was inspired for a change in education.
+                </p>
+            </div>
+            <div id="mission-container">
+                <h3>Full-time Mission for the Church of Jesus Christ of Latter-day Saints</h3>
+                <div id="mission">
+                    <img src="images/Missionary.jpg" alt="Missionary Part One">
+                    <img src="images/Mission-End.jpg" alt="Missionary Part Two">
+                </div>
+                <p>
+                    In 2019, I departed to serve a full-time mission for the Church of Jesus Christ of
+                    Latter-day Saints in the Tokyo North Mission. For about 9 months I endured hardships
+                    like none other and learned to find joy and strength in the details and little things
+                    that surrounded my daily life as a missionary. 
+                    <br><br>
+                    I never knew heartbreak or disappointment so well until the worldwide pandemic hit with
+                    the Corona Virus. Like many others, I was sent home early and was given a couple hard
+                    choices to make: finish my mission elsewhere, wait to go back out, or end my journey early.
+                    <br><br>
+                    In 2021, I chose to finish my mission elsewhere in the Oakland/San Francisco Mission and
+                    learned to overcome new challenges and make room inside myself to love the changes that 
+                    took place and adapt to a completely new environment. I was fortunate to work with 
+                    incredible people throughout this entire journey and continuously learn from them.
+            </div>
+        </section>
+        <section>
+            <h2>My Heritage</h2>
+            <div id="heritage">
+                <img src="images/Japan.jpg" alt="Me in Japan">
+            </div>
+        </section>
     </main>
 
     <!-- br -->
